@@ -11,49 +11,28 @@
         <h1>Athlete Performance Tracker</h1>
     </header>
     <nav>
-        <span class="hamburger">&#9776;</span> <!-- The hamburger icon -->
+        <span class="hamburger" aria-label="Toggle navigation menu">&#9776;</span>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Women</a></li>
+            <li><a href="female.html">Women</a></li>
             <li class="dropdown">
-                <a href="#">Grade Level</a>
+                <a href="#" aria-haspopup="true">Grade Level</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Grade 9</a></li>
-                    <li><a href="#">Grade 10</a></li>
-                    <li><a href="#">Grade 11</a></li>
-                    <li><a href="#">Grade 12</a></li> 
+                    <li><a href="grade_9.html">Grade 9</a></li>
+                    <li><a href="grade_10.html">Grade 10</a></li>
+                    <li><a href="grade_11.html">Grade 11</a></li>
                 </ul>
             </li>
-            <li><a href="results.html">Event Results</a></li> 
+            <li><a href="results.html">Event Results</a></li>
         </ul>
     </nav>
+    
     <main>
     </main>  
 </body>
 </html>
 </body>
 </html>
-        <p>Welcome to the home page! Explore our services and learn more about us.</p>
-        <button class="fab">Filter</button>
-        <section id="team-scores">
-            <h2>Team Scores</h2>
-            <!-- Team stats table -->
-        </section>
+        <p>Welcome to the home page! Explore our page and learn more about track events.</p>
         
-        <section id="individual-results">
-            <h2>Individual Results</h2>
-            <!-- Individual athlete stats -->
-        </section>
-    </main>
-    
-    <!-- JS to toggle menu -->
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('nav ul');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-    </script>
 </body>
 </html>
