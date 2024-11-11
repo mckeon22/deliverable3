@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Image Display Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .athlete {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .athlete img {
+            display: block;
+            margin: 10px 0;
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .athlete h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .athlete p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 3 Results - Image Display Test</h1>
+
+    <div class="athlete first-place">
+        <h3><i class="fas fa-medal" style="color: gold;"></i> Riley Provost</h3>
+        <p><i class="fas fa-trophy icon"></i> Place: 1</p>
+        <p><i class="fas fa-graduation-cap icon"></i> Grade: 11</p>
+        <p><i class="fas fa-stopwatch icon"></i> Time: 23:15.00</p>
+        <p><i class="fas fa-users icon"></i> Team: Saline</p>
+        <img src="images/default.jpg" alt="Profile Picture of Riley Provost" width="150">
+    </div>
+
+    <div class="athlete second-place">
+        <h3><i class="fas fa-medal" style="color: silver;"></i> Claire Steinbrecher</h3>
+        <p><i class="fas fa-trophy icon"></i> Place: 2</p>
+        <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+        <p><i class="fas fa-stopwatch icon"></i> Time: 23:18.50</p>
+        <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+        <img src="images/default.jpg" alt="Profile Picture of Claire Steinbrecher" width="150">
+    </div>
+
+    <div class="athlete third-place">
+        <h3><i class="fas fa-medal" style="color: #CD7F32;"></i> Mahalia Staton</h3>
+        <p><i class="fas fa-trophy icon"></i> Place: 3</p>
+        <p><i class="fas fa-graduation-cap icon"></i> Grade: 12</p>
+        <p><i class="fas fa-stopwatch icon"></i> Time: 23:20.00</p>
+        <p><i class="fas fa-users icon"></i> Team: Ann Arbor</p>
+        <img src="images/default.jpg" alt="Profile Picture of Mahalia Staton" width="150">
+    </div>
+</body>
+</html>

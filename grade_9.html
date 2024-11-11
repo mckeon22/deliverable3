@@ -1,0 +1,399 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css"> 
+        <link rel="stylesheet" href="css/style.css">
+        <title>Grade 9 Athletes</title>
+    </head>
+    <body>
+        <a href="#content" class="skip-link">Skip to main content</a>
+        
+        <header>
+            <h1>Athlete Performance Tracker - Grade 9 Athletes</h1>
+        </header>
+        <nav>
+            <span class="hamburger" aria-label="Toggle navigation menu">&#9776;</span>
+            <ul>
+                <li><a href="female.html">Women</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true">Grade Level</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grade_9.html">Grade 9</a></li>
+                        <li><a href="grade_10.html">Grade 10</a></li>
+                        <li><a href="grade_11.html">Grade 11</a></li>
+                    </ul>
+                </li>
+                <li><a href="results.html">Event Results</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Filter Options -->
+        <div id="filters">
+            <label for="sortFilter">Sort By:</label>
+            <select id="sortFilter" aria-label="Sort Athletes">
+                <option value="default">Default</option>
+                <option value="time">Time</option>
+                <option value="alphabetical">Alphabetical Order</option>
+                <option value="team">Team</option>
+            </select>
+        </div>
+
+        <main id="content">
+            <section id="event-title" tabindex="0">
+                <h2>Grade 9 Athletes</h2>
+            </section>
+            <section id="team-scores">
+                <h3>Team Scores</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Team</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                        <tr>
+                            <td>1</td>
+                            <td>Ypsilanti Lincoln</td>
+                            <td>22</td>
+                        </tr>
+            
+                        <tr>
+                            <td>2</td>
+                            <td>Saline</td>
+                            <td>73</td>
+                        </tr>
+            
+                        <tr>
+                            <td>3</td>
+                            <td>Dexter</td>
+                            <td>81</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </section>
+            <section id="individual-results">
+                <h2>Results</h2>
+                <div id="results-container">
+    
+            <div class="athlete first-place" data-time="23:18.50" data-name="Claire Steinbrecher" data-team="Dexter">
+                <h3><i class="fas fa-medal" style="color: gold;"></i> Claire Steinbrecher</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 2.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 23:18.50</p>
+                <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+                <img src="images/21411167.jpg" alt="Profile Picture of Claire Steinbrecher" width="150">
+            </div>
+        
+            <div class="athlete second-place" data-time="24:30.80" data-name="Deborah Song" data-team="Ann Arbor Huron">
+                <h3><i class="fas fa-medal" style="color: silver;"></i> Deborah Song</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 16.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 24:30.80</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/23349764.jpg" alt="Profile Picture of Deborah Song" width="150">
+            </div>
+        
+            <div class="athlete third-place" data-time="24:37.10" data-name="Violet Olley" data-team="Ann Arbor Skyline">
+                <h3><i class="fas fa-medal" style="color: #CD7F32;"></i> Violet Olley</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 19.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 24:37.10</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Skyline</p>
+                <img src="images/26328683.jpg" alt="Profile Picture of Violet Olley" width="150">
+            </div>
+        
+            <div class="athlete " data-time="25:07.00" data-name="Marissa Salazar" data-team="Saline">
+                <h3> Marissa Salazar</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 23.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 25:07.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Saline</p>
+                <img src="images/default.jpg" alt="Profile Picture of Marissa Salazar" width="150">
+            </div>
+        
+            <div class="athlete " data-time="25:22.90" data-name="Calla Sopoci" data-team="Ann Arbor Skyline">
+                <h3> Calla Sopoci</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 26.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 25:22.90</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Skyline</p>
+                <img src="images/default.jpg" alt="Profile Picture of Calla Sopoci" width="150">
+            </div>
+        
+            <div class="athlete " data-time="25:27.10" data-name="Charlotte Kinder" data-team="Ann Arbor Pioneer">
+                <h3> Charlotte Kinder</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 28.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 25:27.10</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Pioneer</p>
+                <img src="images/default.jpg" alt="Profile Picture of Charlotte Kinder" width="150">
+            </div>
+        
+            <div class="athlete " data-time="25:27.60" data-name="Meenakshi Pradeep" data-team="Ann Arbor Huron">
+                <h3> Meenakshi Pradeep</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 29.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 25:27.60</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/23349757.jpg" alt="Profile Picture of Meenakshi Pradeep" width="150">
+            </div>
+        
+            <div class="athlete " data-time="25:45.60" data-name="Aubrey Pakulski" data-team="Temperance Bedford">
+                <h3> Aubrey Pakulski</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 35.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 25:45.60</p>
+                <p><i class="fas fa-users icon"></i> Team: Temperance Bedford</p>
+                <img src="images/default.jpg" alt="Profile Picture of Aubrey Pakulski" width="150">
+            </div>
+        
+            <div class="athlete " data-time="26:03.00" data-name="Sade Napier" data-team="Ypsilanti Lincoln">
+                <h3> Sade Napier</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 41.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 26:03.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Ypsilanti Lincoln</p>
+                <img src="images/default.jpg" alt="Profile Picture of Sade Napier" width="150">
+            </div>
+        
+            <div class="athlete " data-time="26:34.40" data-name="Amelia Shirk" data-team="Ann Arbor Pioneer">
+                <h3> Amelia Shirk</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 45.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 26:34.40</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Pioneer</p>
+                <img src="images/default.jpg" alt="Profile Picture of Amelia Shirk" width="150">
+            </div>
+        
+            <div class="athlete " data-time="27:36.00" data-name="Allie Hoeft" data-team="Dexter">
+                <h3> Allie Hoeft</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 55.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 27:36.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+                <img src="images/default.jpg" alt="Profile Picture of Allie Hoeft" width="150">
+            </div>
+        
+            <div class="athlete " data-time="27:57.90" data-name="Rhiannon Reed" data-team="Ann Arbor Huron">
+                <h3> Rhiannon Reed</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 59.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 27:57.90</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/default.jpg" alt="Profile Picture of Rhiannon Reed" width="150">
+            </div>
+        
+            <div class="athlete " data-time="27:59.90" data-name="Amy Yang" data-team="Ann Arbor Huron">
+                <h3> Amy Yang</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 61.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 27:59.90</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/default.jpg" alt="Profile Picture of Amy Yang" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:10.20" data-name="Haruka Inada" data-team="Ann Arbor Huron">
+                <h3> Haruka Inada</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 63.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:10.20</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/default.jpg" alt="Profile Picture of Haruka Inada" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:23.40" data-name="Emma Peer" data-team="Temperance Bedford">
+                <h3> Emma Peer</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 65.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:23.40</p>
+                <p><i class="fas fa-users icon"></i> Team: Temperance Bedford</p>
+                <img src="images/default.jpg" alt="Profile Picture of Emma Peer" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:27.90" data-name="Romy Pintar" data-team="Dexter">
+                <h3> Romy Pintar</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 67.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:27.90</p>
+                <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+                <img src="images/default.jpg" alt="Profile Picture of Romy Pintar" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:37.00" data-name="Vivien Sobota" data-team="Ypsilanti Lincoln">
+                <h3> Vivien Sobota</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 69.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:37.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Ypsilanti Lincoln</p>
+                <img src="images/default.jpg" alt="Profile Picture of Vivien Sobota" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:42.70" data-name="Kriszti Njus" data-team="Ann Arbor Pioneer">
+                <h3> Kriszti Njus</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 71.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:42.70</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Pioneer</p>
+                <img src="images/default.jpg" alt="Profile Picture of Kriszti Njus" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:51.10" data-name="Sophia Bellizzi" data-team="Chelsea">
+                <h3> Sophia Bellizzi</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 73.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:51.10</p>
+                <p><i class="fas fa-users icon"></i> Team: Chelsea</p>
+                <img src="images/default.jpg" alt="Profile Picture of Sophia Bellizzi" width="150">
+            </div>
+        
+            <div class="athlete " data-time="28:58.40" data-name="Aleena Bower" data-team="Pinckney">
+                <h3> Aleena Bower</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 74.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 28:58.40</p>
+                <p><i class="fas fa-users icon"></i> Team: Pinckney</p>
+                <img src="images/default.jpg" alt="Profile Picture of Aleena Bower" width="150">
+            </div>
+        
+            <div class="athlete " data-time="29:13.00" data-name="Kayloni Nunez" data-team="Temperance Bedford">
+                <h3> Kayloni Nunez</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 77.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 29:13.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Temperance Bedford</p>
+                <img src="images/default.jpg" alt="Profile Picture of Kayloni Nunez" width="150">
+            </div>
+        
+            <div class="athlete " data-time="30:01.00" data-name="Halynn Kim" data-team="Ann Arbor Huron">
+                <h3> Halynn Kim</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 79.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 30:01.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Huron</p>
+                <img src="images/default.jpg" alt="Profile Picture of Halynn Kim" width="150">
+            </div>
+        
+            <div class="athlete " data-time="30:20.30" data-name="Juliet Towns" data-team="Ypsilanti Lincoln">
+                <h3> Juliet Towns</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 83.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 30:20.30</p>
+                <p><i class="fas fa-users icon"></i> Team: Ypsilanti Lincoln</p>
+                <img src="images/default.jpg" alt="Profile Picture of Juliet Towns" width="150">
+            </div>
+        
+            <div class="athlete " data-time="30:24.80" data-name="Gaby Chapman" data-team="Ann Arbor Pioneer">
+                <h3> Gaby Chapman</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 85.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 30:24.80</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Pioneer</p>
+                <img src="images/default.jpg" alt="Profile Picture of Gaby Chapman" width="150">
+            </div>
+        
+            <div class="athlete " data-time="31:18.60" data-name="Angelica Thomas" data-team="Jackson">
+                <h3> Angelica Thomas</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 87.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 31:18.60</p>
+                <p><i class="fas fa-users icon"></i> Team: Jackson</p>
+                <img src="images/default.jpg" alt="Profile Picture of Angelica Thomas" width="150">
+            </div>
+        
+            <div class="athlete " data-time="31:58.00" data-name="Abigail McDonald" data-team="Ypsilanti Lincoln">
+                <h3> Abigail McDonald</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 89.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 31:58.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Ypsilanti Lincoln</p>
+                <img src="images/default.jpg" alt="Profile Picture of Abigail McDonald" width="150">
+            </div>
+        
+            <div class="athlete " data-time="33:54.10" data-name="Livi Byers" data-team="Ann Arbor Skyline">
+                <h3> Livi Byers</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 98.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 33:54.10</p>
+                <p><i class="fas fa-users icon"></i> Team: Ann Arbor Skyline</p>
+                <img src="images/default.jpg" alt="Profile Picture of Livi Byers" width="150">
+            </div>
+        
+            <div class="athlete " data-time="34:14.40" data-name="Maggie Meek" data-team="Dexter">
+                <h3> Maggie Meek</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 99.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 34:14.40</p>
+                <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+                <img src="images/default.jpg" alt="Profile Picture of Maggie Meek" width="150">
+            </div>
+        
+            <div class="athlete " data-time="34:20.80" data-name="Giuliana Biundo" data-team="Dexter">
+                <h3> Giuliana Biundo</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 101.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 34:20.80</p>
+                <p><i class="fas fa-users icon"></i> Team: Dexter</p>
+                <img src="images/default.jpg" alt="Profile Picture of Giuliana Biundo" width="150">
+            </div>
+        
+            <div class="athlete " data-time="35:12.90" data-name="Grace McCormick" data-team="Monroe">
+                <h3> Grace McCormick</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 105.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 35:12.90</p>
+                <p><i class="fas fa-users icon"></i> Team: Monroe</p>
+                <img src="images/default.jpg" alt="Profile Picture of Grace McCormick" width="150">
+            </div>
+        
+            <div class="athlete " data-time="35:36.00" data-name="Angelina Thomas" data-team="Jackson">
+                <h3> Angelina Thomas</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 107.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 35:36.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Jackson</p>
+                <img src="images/default.jpg" alt="Profile Picture of Angelina Thomas" width="150">
+            </div>
+        
+            <div class="athlete " data-time="36:13.00" data-name="Emily Xiao" data-team="Chelsea">
+                <h3> Emily Xiao</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 109.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 36:13.00</p>
+                <p><i class="fas fa-users icon"></i> Team: Chelsea</p>
+                <img src="images/default.jpg" alt="Profile Picture of Emily Xiao" width="150">
+            </div>
+        
+            <div class="athlete " data-time="36:42.70" data-name="Virginia Nocentini" data-team="Jackson">
+                <h3> Virginia Nocentini</h3>
+                <p><i class="fas fa-trophy icon"></i> Place: 110.</p>
+                <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
+                <p><i class="fas fa-stopwatch icon"></i> Time: 36:42.70</p>
+                <p><i class="fas fa-users icon"></i> Team: Jackson</p>
+                <img src="images/default.jpg" alt="Profile Picture of Virginia Nocentini" width="150">
+            </div>
+        
+                </div>
+            </section>
+
+            <!-- Back to Top Button -->
+            <button id="backToTop" aria-label="Back to Top" style="display: none; position: fixed; bottom: 20px; left: 20px; padding: 10px; background-color: #004D40; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; z-index: 1000;">Top</button>
+        
+        </main>
+        <footer id="main-footer">
+            <p>&copy; 2024 Client Project - All rights reserved.</p>
+        </footer>
+
+        <!-- Link to External JavaScript File -->
+        <script src="js/script.js"></script>
+    </body>
+    </html>
+    

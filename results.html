@@ -1,89 +1,90 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/reset.css"> 
-    <link rel="stylesheet" href="css/style.css">
-    <title>Client Project - Results</title>
-</head>
-<body>
-    <header>
-        <h1>Athlete Performance Tracker</h1>
-    </header>
-    <nav>
-        <span class="hamburger">&#9776;</span> <!-- The hamburger icon -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li class="dropdown">
-                <a href="#">Grade Level</a>
-                <ul class="dropdown-content">
-                    <li><a href="#"> 9</a></li>
-                    <li><a href="#">10</a></li>
-                    <li><a href="#"> 11</a></li>
-                    <li><a href="#"> 12</a></li>
-                </ul>
-            </li>
-            <li><a href="results.html">Event Results</a></li>
-        </ul>
-    </nav>
-    <main id="content">
-        <section id="event-title">
-            <h2>Womens 5000 Meters Junior Varsity</h2>
-        </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css"> 
+        <link rel="stylesheet" href="css/style.css">
+        <title>Event Results</title>
+    </head>
+    <body>
+        <a href="#content" class="skip-link">Skip to main content</a>
         
-        <div id="theme-switcher-container">
-    <div id="theme-switcher-label">Appearance</div>
-    <div id="theme-switcher">
-        <button id="light-mode-btn">Light Mode</button>
-        <button id="dark-mode-btn">Dark Mode</button>
-        <button id="high-contrast-btn">High Contrast</button>
-    </div>
-</div>
+        <header>
+            <h1>Athlete Performance Tracker - Event Results</h1>
+        </header>
+        <nav>
+            <span class="hamburger" aria-label="Toggle navigation menu">&#9776;</span>
+            <ul>
+                <li><a href="female.html">Women</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true">Grade Level</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grade_9.html">Grade 9</a></li>
+                        <li><a href="grade_10.html">Grade 10</a></li>
+                        <li><a href="grade_11.html">Grade 11</a></li>
+                    </ul>
+                </li>
+                <li><a href="results.html">Event Results</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Filter Options -->
+        <div id="filters">
+            <label for="sortFilter">Sort By:</label>
+            <select id="sortFilter" aria-label="Sort Athletes">
+                <option value="default">Default</option>
+                <option value="time">Time</option>
+                <option value="alphabetical">Alphabetical Order</option>
+                <option value="team">Team</option>
+            </select>
+        </div>
 
-        <section id="team-scores">
-            <h3>Team Scores</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Place</th>
-                        <th>Team</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Ypsilanti Lincoln</td>
-                        <td>22</td>
-                    </tr>
-        
-                    <tr>
-                        <td>2</td>
-                        <td>Saline</td>
-                        <td>73</td>
-                    </tr>
-        
-                    <tr>
-                        <td>3</td>
-                        <td>Dexter</td>
-                        <td>81</td>
-                    </tr>
-        
-                </tbody>
-            </table>
-        </section>
-        <section id="individual-results">
-            <h2>Top 3 Results</h2>
-            <div id="results-container">
-
-            <div class="athlete first-place">
+        <main id="content">
+            <section id="event-title" tabindex="0">
+                <h2>Event Results</h2>
+            </section>
+            <section id="team-scores">
+                <h3>Team Scores</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Team</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                        <tr>
+                            <td>1</td>
+                            <td>Ypsilanti Lincoln</td>
+                            <td>22</td>
+                        </tr>
+            
+                        <tr>
+                            <td>2</td>
+                            <td>Saline</td>
+                            <td>73</td>
+                        </tr>
+            
+                        <tr>
+                            <td>3</td>
+                            <td>Dexter</td>
+                            <td>81</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </section>
+            <section id="individual-results">
+                <h2>Results</h2>
+                <div id="results-container">
+    
+            <div class="athlete first-place" data-time="23:15.00" data-name="Riley Provost" data-team="Saline">
                 <h3><i class="fas fa-medal" style="color: gold;"></i> Riley Provost</h3>
                 <p><i class="fas fa-trophy icon"></i> Place: 1.</p>
                 <p><i class="fas fa-graduation-cap icon"></i> Grade: 11</p>
@@ -92,7 +93,7 @@
                 <img src="images/14164024.jpg" alt="Profile Picture of Riley Provost" width="150">
             </div>
         
-            <div class="athlete second-place">
+            <div class="athlete second-place" data-time="23:18.50" data-name="Claire Steinbrecher" data-team="Dexter">
                 <h3><i class="fas fa-medal" style="color: silver;"></i> Claire Steinbrecher</h3>
                 <p><i class="fas fa-trophy icon"></i> Place: 2.</p>
                 <p><i class="fas fa-graduation-cap icon"></i> Grade: 9</p>
@@ -101,7 +102,7 @@
                 <img src="images/21411167.jpg" alt="Profile Picture of Claire Steinbrecher" width="150">
             </div>
         
-            <div class="athlete third-place">
+            <div class="athlete third-place" data-time="23:20.50" data-name="Mahalia Staton" data-team="Saline">
                 <h3><i class="fas fa-medal" style="color: #CD7F32;"></i> Mahalia Staton</h3>
                 <p><i class="fas fa-trophy icon"></i> Place: 3.</p>
                 <p><i class="fas fa-graduation-cap icon"></i> Grade: 11</p>
@@ -110,29 +111,19 @@
                 <img src="images/22262892.jpg" alt="Profile Picture of Mahalia Staton" width="150">
             </div>
         
-            </div>
-        </section>
-    </main>
-    <footer id="main-footer">
-        <p>&copy; 2024 Client Project - All rights reserved.</p>
-    </footer>
+                </div>
+            </section>
 
-    <!-- Theme switcher JavaScript -->
-    <script>
-    // Get the buttons and listen for click events
-    document.getElementById('light-mode-btn').addEventListener('click', () => {
-        document.body.classList.remove('dark-mode', 'high-contrast-mode');
-    });
+            <!-- Back to Top Button -->
+            <button id="backToTop" aria-label="Back to Top" style="display: none; position: fixed; bottom: 20px; left: 20px; padding: 10px; background-color: #004D40; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; z-index: 1000;">Top</button>
+        
+        </main>
+        <footer id="main-footer">
+            <p>&copy; 2024 Client Project - All rights reserved.</p>
+        </footer>
 
-    document.getElementById('dark-mode-btn').addEventListener('click', () => {
-        document.body.classList.add('dark-mode');
-        document.body.classList.remove('high-contrast-mode');
-    });
-
-    document.getElementById('high-contrast-btn').addEventListener('click', () => {
-        document.body.classList.add('high-contrast-mode');
-        document.body.classList.remove('dark-mode');
-    });
-    </script>
-</body>
-</html>
+        <!-- Link to External JavaScript File -->
+        <script src="js/script.js"></script>
+    </body>
+    </html>
+    

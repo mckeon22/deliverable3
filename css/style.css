@@ -3,412 +3,640 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;500&display=swap');
 
 
+/* Focus Styles for Accessibility */
+:focus {
+  outline: 3px solid var(--focus-color); /* Focus indicator for keyboard navigation */
+  outline-offset: 2px;
+}
+
+/* Skip Link Styling */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: var(--focus-color);
+  color: #000;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px; /* Bring skip link into view when focused */
+}
+
+/* Light mode variables */
 :root {
-  /* Light mode variables */
   --bg-color: #F7F7F7;
   --text-color: #212121;
   --header-bg: #00705e;
-  --header-text-color: rgb(255, 255, 255);
-  --heading-color: #ffffff; 
+  --header-text-color: #ffffff;
+  --heading-color: #ffffff;
   --nav-bg: #004D40;
   --nav-text-color: white;
-  --athlete-bg: rgb(255, 255, 255);
+  --athlete-bg: #ffffff;
   --athlete-text-color: #212121;
   --first-place-bg: #FFF7D1;
   --second-place-bg: #F1F1F1;
   --third-place-bg: #F2E0D1;
 }
 
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1A1A1A;
+    --text-color: #E0E0E0;
+    --header-bg: #2E2E2E;
+    --header-text-color: #FFFFFF;
+    --heading-color: #ffffff;
+    --nav-bg: #2E2E2E;
+    --nav-text-color: #FFFFFF;
+    --athlete-bg: #333333;
+    --athlete-text-color: #FFFFFF;
+    --first-place-bg: #555555;
+    --second-place-bg: #444444;
+    --third-place-bg: #3A3A3A;
+    --table-header-bg: #555555;
+    --table-row-bg: #3A3A3A;
+    --table-hover-bg: #4E4E4E;
+    --table-border-color: #666666;
+  }
 
-.dark-mode {
-  /* Dark mode variables */
-  --bg-color: #1E1E1E;
-  --text-color: #ffffff;
-  --header-bg: #282828;
-  --header-text-color: #F1F1F1;
-  --heading-color: #ffffff; /* white heading for dark mode */
-  --nav-bg: #282828;
-  --nav-text-color: #F1F1F1;
-  --athlete-bg: #2C2C2C;
-  --athlete-text-color: #E0E0E0;
-  --first-place-bg: #666633;
-  --second-place-bg: #4A4A4A;
-  --third-place-bg: #5A3E2B;
+  /* General Dark Background */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  /* Header Styling */
+  header {
+    background-color: var(--header-bg);
+    color: var(--header-text-color);
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: var(--header-bg);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+
+  h2, h3 {
+    color: black;
+  }
+
+  /* Table Background and Text */
+  table {
+    background-color: var(--table-row-bg);
+    color: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th {
+    background-color: #282929;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 10px;
+    color: var(--text-color);
+  }
+
+  /* Row Styling for Readability */
+  tr:nth-child(even) {
+    background-color: #2C2C2C;
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--table-row-bg);
+  }
+
+  /* Highlight Rows for Top Places */
+  tr:nth-child(1) td {
+    background-color: #dfdfdf;
+    color: #000;
+  }
+
+  tr:nth-child(2) td {
+    background-color: #C0C0C0;
+    color: #000;
+  }
+
+  tr:nth-child(3) td {
+    background-color: #b1b1b1;
+    color: #000;
+  }
+
+  /* Optional: Add a Border for Clarity */
+  table, th, td {
+    border: 1px solid var(--table-border-color);
+  }
+
+  /* Athlete Cards Dark Mode */
+  .athlete {
+    background-color: var(--athlete-bg);
+    color: var(--athlete-text-color);
+    border: 1px solid var(--table-border-color);
+  }
+
+  .athlete:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.3);
+    border: 1px solid #004D40;
+  }
+
+  /* Sort By Dropdown Dark Mode */
+  #filters label,
+  #sortFilter {
+    color: var(--text-color);
+  }
+
+  #sortFilter {
+    background-color: #333;
+    border-color: #555;
+    color: #eaeaea;
+  }
+
+  #sortFilter:hover {
+    background-color: #444;
+    border-color: #666;
+  }
+
+  body footer {
+    background-color: var(--header-bg);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+  .skip-link {
+  
+    color: #fffefe;
+  
+  }
+  
 }
-.dark-mode h2,
-.dark-mode h3 {
-    color: rgb(0, 0, 0) !important;
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  :root {
+    --bg-color: #000000;
+    --text-color: #FFFF00;
+    --header-bg: #000000;
+    --header-text-color: #FFFF00;
+    --heading-color: #FFFF00;
+    --nav-bg: #000000;
+    --nav-text-color: #FFFF00;
+    --athlete-bg: #000000;
+    --athlete-text-color: #FFFF00;
+    --first-place-bg: #C0C0C0;
+    --second-place-bg: #C0C0C0;
+    --third-place-bg: #C0C0C0;
+    --table-header-bg: #000000;
+    --table-row-bg: #333333;
+    --table-hover-bg: #444444;
+    --table-border-color: #FFFF00;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  header {
+    background-color: var(--header-bg);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    color: var(--heading-color);
+  }
+
+h2, h3
+{color: #000;}
+  nav {
+    background-color: var(--nav-bg);
+  }
+
+  nav ul li a {
+    color: var(--nav-text-color);
+  }
+
+  nav ul li a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+
+  /* Athlete Cards in High Contrast Mode */
+  .athlete {
+    background-color: var(--athlete-bg);
+    color: var(--athlete-text-color);
+    border: 1px solid var(--table-border-color);
+  }
+
+  .athlete:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 0, 0.5);
+    border: 1px solid var(--table-border-color);
+  }
+
+  /* Team Scores Table in High Contrast Mode */
+  #team-scores table {
+    border-color: var(--table-border-color);
+  }
+
+  th, td {
+    color: var(--text-color);
+    border: 1px solid var(--table-border-color);
+  }
+
+  tr:nth-child(even) {
+    background-color: #333333;
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--table-row-bg);
+  }
+
+  tr:nth-child(1) td {
+    background-color: black;
+    color: #e6eb48;
+  }
+
+  tr:nth-child(2) td {
+    background-color: black;
+    color: #e6eb48;
+  }
+
+  tr:nth-child(3) td {
+    background-color: black;
+    color: #e6eb48;
+  }
+
+  /* Sort By Dropdown in High Contrast Mode */
+  #sortFilter {
+    background-color: var(--bg-color);
+    border-color: var(--table-border-color);
+    color: var(--text-color);
+  }
+
+  #sortFilter:hover {
+    background-color: #FFFF00;
+    color: #000;
+    border-color: #FFFF00;
+  }
+
+  /* Footer in High Contrast Mode */
+  footer {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+  body footer {
+    background-color: var(--header-bg);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background-color: var(--focus-color);
+    color: #ddea54;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
 }
 
-.high-contrast-mode {
-   --bg-color: #000000; /* Black background */
-   --text-color: #FFFFFF; /* White text for better contrast */
-   --header-bg: #000000;
-   --header-text-color:  #FFD700; /* Bright yellow for headings */
-   --heading-color: #A0522D; 
-   --nav-bg: #000000;
-   --nav-text-color: #FFCC00; /* Yellow text in the navbar */
-   --athlete-bg: #000000;
-   --athlete-text-color: #FFCC00;
-   --first-place-bg: #FFCC00; /* Bright yellow for first place */
-   --second-place-bg: #C0C0C0; /* Silver background for second place */
-   --third-place-bg: #CD7F32; /* Bronze for third place */
+/* General styling */
+body {
+  background-color: var(--bg-color);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.high-contrast-mode h2 {
-   color: var(--heading-color) !important; /* Force color override */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.high-contrast-mode h3 {
-   color: var(--heading-color) !important; /* Force color override */
-}
-
-
-
-/* Ensure text is readable */
-.high-contrast-mode header h1, 
-.high-contrast-mode #individual-results h2 {
-   color: var(--heading-color); /* Yellow for headings */
-}
-
-/* Table Styling for High Contrast Mode */
-.high-contrast-mode table th {
-   background-color: #000000; /* Black background for table header */
-   color: #FFCC00; /* Yellow text for table header */
-}
-
-.high-contrast-mode table td {
-   color: #FFFFFF; /* White text for table cells */
-}
-
-.high-contrast-mode table tr:nth-child(even) {
-   background-color: #333333; /* Dark grey for alternating rows */
-}
-
-
-header h1,
-#individual-results h2 {
-  color: var(--heading-color); /* Heading color will change based on the mode */
+header h1 {
   font-size: clamp(2rem, 2.5vw, 3rem);
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-}
-body {
-   background-color: var(--bg-color);
-   color: var(--text-color);
-   font-family: 'Roboto', sans-serif;
-   margin: 0;
-   padding: 0;
+  color: var(--heading-color);
 }
 
-
-/* Header styling */
-header {
-   text-align: center;
-   padding: 20px;
-   background-color: var(--header-bg);
-   color: var(--header-text-color);
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Navigation Bar */
+nav {
+  background-color: var(--nav-bg);
 }
 
-
-header h1 {
-   font-size: clamp(2rem, 2.5vw, 3rem);
-   font-family: 'Oswald', sans-serif;
-   font-weight: 700;
-}
-
-
-/* Navbar Styling */
 nav ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
-   display: flex;
-   justify-content: center;
-   background-color: var(--nav-bg);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
-
 
 nav ul li {
-   margin: 0 20px;
+  position: relative;
+  margin: 0 20px;
 }
-
 
 nav ul li a {
-   color: var(--nav-text-color);
-   text-decoration: none;
-   padding: 10px;
-   display: block;
-   font-size: clamp(0.9rem, 1vw, 1.2rem);
-   transition: background-color 0.3s ease;
-}
-
-
-nav ul li a:hover {
-   background-color: #2ac2b0;
-}
-
-
-/* Dropdown Menu */
-.dropdown-content {
-   display: none;
-   position: absolute;
-   background-color: #FFFFFF;
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-   z-index: 1;
-   padding: 10px;
-   border-radius: 5px;
-}
-
-
-.dropdown:hover .dropdown-content {
-   display: block;
-}
-
-
-.dropdown-content li a {
-   color: #004D40;
-   padding: 10px;
-   text-decoration: none;
-   display: block;
-}
-
-
-.dropdown-content li a:hover {
-   background-color: #E0F7FA;
-   color: #004D40;
-}
-
-
-/* Main Container */
-main {
-   margin: 20px;
-   padding: 20px;
-   background-color: white;
-   border-radius: 10px;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   max-width: 1200px;
-   margin: 20px auto;
-   font-size: clamp(1rem, 1vw, 1.1rem);
-}
-
-
-/* Top Results Title */
-#individual-results h2 {
-   font-size: clamp(1.8rem, 2.5vw, 3rem);
-   font-family: 'Oswald', sans-serif;
-   font-weight: 700;
-   color: var(--text-color);
-   margin-bottom: 30px;
-   text-align: center;
-}
-
-
-/* Results Container */
-#results-container {
-   display: flex;
-   justify-content: space-between;
-   gap: 40px;
-   margin-top: 20px;
-}
-
-
-/* Individual Athlete Boxes */
-.athlete {
-   flex: 1;
-   padding: 25px;
-   border-radius: 15px;
-   background-color: var(--athlete-bg);
-   color: var(--athlete-text-color);
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   text-align: center;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.athlete:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Gold, Silver, Bronze Backgrounds */
-.athlete.first {
-   background-color: var(--first-place-bg);
-}
-
-
-.athlete.second {
-   background-color: var(--second-place-bg);
-}
-
-
-.athlete.third {
-   background-color: var(--third-place-bg);
-}
-
-
-/* Athlete Name */
-.athlete h3 {
-   font-size: clamp(1.5rem, 1.8vw, 2.2rem);
-   font-family: 'Oswald', sans-serif;
-   font-weight: 700;
-   color: var(--athlete-text-color);
-   margin-bottom: 10px;
-}
-
-
-/* Athlete Details with Icons */
-.athlete p {
-   font-size: clamp(1rem, 1vw, 1.2rem);
-   margin: 5px 0;
-}
-
-
-.athlete .icon {
-   margin-right: 8px;
-   color: #004D40;
-}
-
-
-.athlete img {
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   margin-top: 15px;
-   border: 3px solid white;
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.athlete img[alt*="Profile Picture"] {
-   display: none;
-}
-
-
-/* Styling the table header and rows for dark mode and high contrast mode */
-table {
-   background-color: var(--bg-color);
-   color: var(--text-color);
-   width: 100%;
-   border-collapse: collapse;
-   text-align: left;
-}
-
-
-table th, table td {
-   border: 1px solid var(--text-color);
-   padding: 12px;
-}
-
-
-table th {
-   background-color: var(--header-bg);
-   color: var(--header-text-color);
-}
-
-
-table tr:nth-child(even) {
-   background-color: var(--athlete-bg);
-}
-
-
-/* Footer */
-footer {
-   text-align: center;
-   padding: 20px;
-   background-color: var(--header-bg);
-   color: var(--header-text-color);
-   margin-top: 40px;
-}
-
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-   #results-container {
-       flex-direction: column;
-       align-items: center;
-   }
-   .athlete {
-       width: 100%;
-       margin-bottom: 20px;
-   }
-   nav ul {
-       flex-direction: column;
-       align-items: center;
-   }
-   nav ul li {
-       margin-bottom: 10px;
-   }
-}
-
-
-/* Style for the mode-switcher dropdown in the bottom-right corner */
-#theme-switcher-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000; 
-}
-
-
-#theme-switcher-label {
-  background-color: #004D40;
-  color: white;
+  color: var(--nav-text-color);
+  text-decoration: none;
   padding: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
+  display: block;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
   transition: background-color 0.3s ease;
 }
 
-
-#theme-switcher-label:hover {
-  background-color: #2ac2b0; /* Lighter teal on hover */
+nav ul li a:hover {
+  background-color: #2ac2b0;
 }
 
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
 
-#theme-switcher {
-  display: none; /* Hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
   margin-top: 10px;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
-#theme-switcher button {
-  background-color: #004D40; /* Base teal color for buttons */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-
-#theme-switcher button:hover {
-  background-color: #2ac2b0; /* Lighter teal on hover */
-}
-
-
-#theme-switcher button:active {
-  background-color: #00332e; /* Darker teal when clicked */
-}
-
-
-#theme-switcher button:focus {
-  outline: 3px solid #FFD700; /* Highlight on focus (e.g., keyboard users) */
-}
-
-
-/* Show dropdown when hovered */
-#theme-switcher-container:hover #theme-switcher {
+.dropdown-content li {
   display: block;
+}
+
+.dropdown-content li a {
+  color: #004D40;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #E0F7FA;
+  color: #004D40;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
+}
+
+/* Main content */
+main {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  font-size: clamp(1rem, 1vw, 1.1rem);
+}
+
+/* Individual Results Heading */
+#individual-results h2 {
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Athlete Cards */
+#results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Athlete Cards */
+@media (min-width: 768px) {
+  #results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+.athlete {
+  padding: 25px;
+  border-radius: 15px;
+  color: var(--athlete-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.athlete:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 77, 64, 0.3);
+  border: 1px solid #004D40;
+}
+
+.athlete h3 {
+  font-size: clamp(1.5rem, 1.8vw, 2.2rem);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: var(--athlete-text-color);
+  margin-bottom: 10px;
+}
+
+.athlete p {
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  margin: 5px 0;
+}
+
+.athlete img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 15px;
+  border: 3px solid white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Scores Table Styling */
+/* Mobile View - Default */
+#team-scores table {
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#team-scores thead {
+  display: none;
+}
+
+#team-scores tr {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#team-scores td {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  #team-scores table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  #team-scores thead {
+    display: table-header-group;
+  }
+
+  #team-scores tr {
+    display: table-row;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #team-scores td, #team-scores th {
+    display: table-cell;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  #team-scores th {
+    background-color: #004D40;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  #team-scores tr:nth-child(even) {
+    background-color: var(--athlete-bg);
+  }
+}
+
+/* Sort By Dropdown */
+#filters {
+  margin: 20px;
+  text-align: right;
+}
+
+#filters label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
+
+#sortFilter {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#sortFilter:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+#sortFilter:focus {
+  outline: none;
+  border-color: #004D40;
+}
+
+/* Dark mode styling for the Sort By dropdown */
+#filters label,
+#sortFilter {
+  color: var(--text-color);
+}
+
+#sortFilter {
+  background-color: var(--athlete-bg);
+  border-color: var(--table-border-color);
+}
+
+#sortFilter:hover {
+  background-color: #444;
+  border-color: #666;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #004D40;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+
+/* Focus Styles for Accessibility */
+:focus {
+  outline: 3px solid var(--focus-color); /* Focus indicator for keyboard navigation */
+  outline-offset: 2px;
 }
 
