@@ -103,12 +103,11 @@ def generate_html(file_name, title, team_scores, individual_results):
             image_path = os.path.join(image_folder_path, "default.jpg")
         
         place_class = ["first-place", "second-place", "third-place"][idx] if idx < 3 else ""
-        medal_color = ["gold", "silver", "#CD7F32"][idx] if idx < 3 else "black"
-        medal_icon = f'<i class="fas fa-medal" style="color: {medal_color};"></i>' if idx < 3 else ""
+        medal_color_class = ["gold-medal", "silver-medal", "bronze-medal"][idx] if idx < 3 else "no-medal"
 
         html_content += f"""
             <div class="athlete {place_class}" data-time="{result[4]}" data-name="{result[2]}" data-team="{result[5]}">
-                <h3>{medal_icon} {result[2]}</h3>
+                <h3><i class="fas fa-medal {medal_color_class}"></i> {result[2]}</h3>
                 <p><i class="fas fa-trophy icon"></i> Place: {result[0]}</p>
                 <p><i class="fas fa-graduation-cap icon"></i> Grade: {result[1]}</p>
                 <p><i class="fas fa-stopwatch icon"></i> Time: {result[4]}</p>
@@ -122,7 +121,7 @@ def generate_html(file_name, title, team_scores, individual_results):
             </section>
 
             <!-- Back to Top Button -->
-            <button id="backToTop" aria-label="Back to Top" style="display: none; position: fixed; bottom: 20px; left: 20px; padding: 10px; background-color: #004D40; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; z-index: 1000;">Top</button>
+            <button id="backToTop" class="back-to-top">Top</button>
         
         </main>
         <footer id="main-footer">

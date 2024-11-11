@@ -2,7 +2,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;500&display=swap');
 
-
 /* Focus Styles for Accessibility */
 :focus {
   outline: 3px solid var(--focus-color); /* Focus indicator for keyboard navigation */
@@ -179,11 +178,8 @@
     font-size: 1rem;
   }
   .skip-link {
-  
     color: #fffefe;
-  
   }
-  
 }
 
 /* High Contrast Mode */
@@ -223,8 +219,10 @@
     color: var(--heading-color);
   }
 
-h2, h3
-{color: #000;}
+  h2, h3 {
+    color: #000;
+  }
+
   nav {
     background-color: var(--nav-bg);
   }
@@ -306,6 +304,7 @@ h2, h3
     margin-top: 40px;
     font-size: 1rem;
   }
+
   body footer {
     background-color: var(--header-bg);
     color: #FFFFFF;
@@ -314,6 +313,7 @@ h2, h3
     margin-top: 40px;
     font-size: 1rem;
   }
+
   .skip-link {
     position: absolute;
     top: -40px;
@@ -433,8 +433,6 @@ main {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin: 20px auto;
   font-size: clamp(1rem, 1vw, 1.1rem);
 }
 
@@ -633,10 +631,20 @@ footer {
   }
 }
 
-
-/* Focus Styles for Accessibility */
-:focus {
-  outline: 3px solid var(--focus-color); /* Focus indicator for keyboard navigation */
-  outline-offset: 2px;
+.gold-medal { color: gold; }
+.silver-medal { color: silver; }
+.bronze-medal { color: #CD7F32; }
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #004D40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000;
 }
-
